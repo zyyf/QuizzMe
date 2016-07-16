@@ -1,11 +1,20 @@
-# QuizzMe（Project of IWP）
-
+QuizzMe（Project of IWP）
+===========================
 
 这是IWP的大作业QuizzMe的全部代码
 
-layout.docx为各个页面的布局设计
+* layout.docx为各个页面的布局设计
 
-project.docx为任务需求
+* project.docx为任务需求
+
+###页面结构
+![页面结构](img/user-guide1.jpg)
+
+###导航
+![导航栏](img/user-guide2.jpg)
+
+###功能
+![功能](img/user-guide3.jpg)
 
 下面为任务原文：
 
