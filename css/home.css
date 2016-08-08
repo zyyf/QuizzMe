@@ -1,87 +1,47 @@
 @charset "UTF-8";
 /*   "Helvetica Neue", Arial, "Hiragino Sans GB", "WenQuanYi Micro Hei", "Microsoft YaHei", sans-serif     */
 
-
-* {
-    margin: 0;
-    padding: 0;
+#welcome__intro,
+#user-action__msg {
+    font: 20px/30px arial,sans-serif;
 }
 
-body {
-    background: #dcdcdc;
+#welcome__intro p + p {
+    margin-top: 20px;
 }
 
-/*------------header-----------------*/
-
-header {
-    position: relative;
-
-    height: 56px;
-
-    background: #228abf;
+#welcome__intro--title {
+    font: 40px arial,sans-serif;
+    margin: 20px 0;
 }
 
-header .logo {
-    display: block;
-    float: left;
-}
-
-header .login {
+.welcome__link {
+    cursor: pointer;
+    vertical-align: middle;
     text-decoration: none;
+    display: inline-block;
 
-    display: block;
-    float: right;
+    
+    padding: 10px 20px;
 
-    height: 56px;
-    margin: 0 50px 0 20px;
+    font-size: 30px;
 
-    font: 20px arial,tahoma,sans-serif;
-
-    color: #fff;
-}
-
-header .login img {
-    margin: 20px 5px;
-}
-
-header .login span {
-    float: right;
-
-    margin: 16.5px 2px;
-}
-
-/*------------------------main section----------------------*/
-
-.main {
-    width: 1000px;
-    height: 1000px;
+    color: #000;
+    border: 1px solid #888;
+    border-radius: .2em;
+    outline: none;
     background: #fff;
-    margin: 70px auto;
-    border: 3px solid #e1e8ed;
-    border-radius: 5px;
+    box-shadow: 0 .05em .25em rgba(0,0,0,.5);
+    margin-left: 20px;
 }
 
-.main h1 {
-    text-align: center;
+.welcome__link:hover {
+    color: #fff !important;
+    border-color: #228abf !important;
+    background: #228abf !important;
 }
-
-.main a {
-    border: 1px solid red;
-}
-
-/*-----------------footer section-----------------*/
 
 footer {
-    position: relative;
+    position: absolute;
     bottom: 0;
-    right: 0;
-    left: 0;
-    background: #000;
-    color: #808080;
-    height: 48px;
-}
-
-footer p {
-    text-align: center;
-    padding-top: 15px;
 }

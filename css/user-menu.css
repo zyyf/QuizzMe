@@ -1,0 +1,49 @@
+@charset "UTF-8";
+/*   "Helvetica Neue", Arial, "Hiragino Sans GB", "WenQuanYi Micro Hei", "Microsoft YaHei", sans-serif     */
+
+#user-status p {
+	font: 18px/28px Arial,sans-serif;
+	margin: 20px;
+}
+
+#user-status__intro--times,
+#user-status__intro--average {
+	color: #ec6500;
+	font: 700 24px Arial,sans-serif;
+	padding: 10px;
+}
+
+input[type="button"]:hover {
+	background: #228abf !important;
+	color: #fff !important;
+	border-color: #228abf !important;
+}
+
+#user-action__table {
+	width: 800px;
+	margin: 10px auto;
+	text-align: center;
+	font: 24px Arial,sans-serif;
+}
+
+#user-action__table td {
+	height: 80px;
+}
+
+#user-action__table input[type="button"] {
+	width: 300px;
+	border: 1px solid #888;
+	border-radius: .2em;
+	box-shadow: 0 .05em .25em rgba(0,0,0,.5);
+	cursor: pointer;
+	background: #fff;
+	vertical-align: middle;
+	outline: none;
+	font-size: 30px;
+	padding: 10px 20px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+}

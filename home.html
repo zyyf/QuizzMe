@@ -7,25 +7,26 @@
 	<title>Quizz Me!</title>
 	<meta name="description" content="">
 	<meta name="keywords" content="">
+	<link href="css/main.css" rel="stylesheet">
 	<link href="css/home.css" rel="stylesheet">
 </head>
 <body>
     
 	<header>
-		<img class="logo" src="img/logo.png" alt="logo" height="50px">
-		<a href="#" class="login"><img src="img/user-sign.png"><span>Sign in</span></a>
-		<a href="#" class="login"><img src="img/user-sign.png"><span>Sign up</span></a>
+		<img id="head__logo--img" src="img/logo.png" alt="logo" height="50px">
+		<a href="user-menu.html" class="head__login"><img src="img/user-sign.png"><span>Sign in</span></a>
+		<a href="#" class="head__login"><img src="img/user-sign.png"><span>Sign up</span></a>
 	</header>
 	
-	<div class="main">
-		 <section class="intro">
-		 	<h1>Welcome!</h1>
-		 	<p>Welcome QuizzMe!Welcome QuizzMe!Welcome QuizzMe!Welcome QuizzMe!Welcome QuizzMe!Welcome QuizzMe!Welcome QuizzMe!Welcome QuizzMe!Welcome QuizzMe!Welcome QuizzMe!Welcome QuizzMe!Welcome QuizzMe!Welcome QuizzMe!Welcome QuizzMe!Welcome QuizzMe!Welcome QuizzMe!Welcome QuizzMe!Welcome QuizzMe!Welcome QuizzMe!Welcome QuizzMe!Welcome QuizzMe!Welcome QuizzMe!Welcome QuizzMe!Welcome QuizzMe!Welcome QuizzMe!Welcome QuizzMe!Welcome QuizzMe!Welcome QuizzMe!Welcome QuizzMe!Welcome QuizzMe!</p>
-		 	<h2>Now, you can sign up and complete a quiz, and the result will save in the server, that you will be able to check your score with your account later. Also you can finish a quiz anonymously.</h2>
-		 </section>
-		 <a href="#">Sign up</a>
-		 <a href="#">Log In</a>
-		 <a href="#">Starting a quiz without login</a>
+	<div class="main-container" id="welcome__intro">
+		 	<h1 id="welcome__intro--title">Welcome to <span class="web-name">QuizzMe!</span></h1>
+		 	<p><span class="web-name">QuizzMe!</span>is an application to do Single and Multiple Choice Question quizzes online in various topics. You can test your knowledge by making quizzes but it can also supply new questions and store them in the database.</p>
+		 	<p>Now, you can sign up and complete a quiz, and the result will save in the server, that you will be able to check your score with your account later.</p>
+	</div>
+
+	<div class="main-container" id="user-action">
+		<p id="user-action__msg">You can also start a quick quiz without login:<a href="quiz.html"  class="welcome__link">Quick quiz</a></p>
+		
 	</div>
 	
 	<footer>

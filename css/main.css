@@ -1,0 +1,141 @@
+@charset "UTF-8";
+/*   "Helvetica Neue", Arial, "Hiragino Sans GB", "WenQuanYi Micro Hei", "Microsoft YaHei", sans-serif     */
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial,sans-serif;
+
+    background: #eeeded;
+}
+
+/*------------header-----------------*/
+
+header {
+    position: relative;
+
+    height: 56px;
+    margin-bottom: 50px;
+
+    background: #228abf;
+}
+
+#head__logo {
+    display: block;
+    float: left;
+}
+
+#head__user-info {
+    display: block;
+    float: right;
+
+    margin-right: 30px;
+    cursor: pointer;
+    padding: 0 30px;
+}
+
+#head__user-info:hover {
+    background: #6495ED;
+    height: 53px;
+    border-bottom: 3px solid #FF7F50;
+}
+
+#head__user-info--img {
+    width: 40px;
+    height: 40px;
+    margin: 6px;
+
+    border: 2px solid #fff;
+    border-radius: 64px;
+    background: #fff;
+}
+
+#head__user-info--name {
+    float: right;
+
+    margin-top: 16px;
+
+    font: 20px verdana,arial,tahoma,sans-serif;
+
+    color: #fff;
+}
+
+
+
+.head__login {
+    text-decoration: none;
+    padding: 0 40px;
+
+    display: block;
+    float: right;
+
+    height: 56px;
+    
+
+    font: 20px arial,tahoma,sans-serif;
+
+    color: #fff;
+}
+
+.head__login:hover {
+    background: #6495ED;
+    height: 53px;
+    border-bottom: 3px solid #FF7F50;
+}
+
+.head__login img {
+    margin: 20px 5px;
+}
+
+.head__login span {
+    float: right;
+
+    margin: 16.5px 2px;
+}
+
+
+/*------------------main body section-------------*/
+
+.main-container {
+    width: 891px;
+    margin: 20px auto;
+    padding: 20px;
+
+    border: 1px solid #cbcbcb;
+    border-radius: 10px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.web-name {
+    font-weight: 700 !important;
+    font-style: italic !important;
+    padding-right: 10px;
+}
+
+
+
+/*------------------------footer section-------------*/
+
+footer {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    clear: both;
+
+    height: 48px;
+
+    color: #808080;
+    background: #000;
+}
+
+footer p {
+    text-align: center;
+
+    padding-top: 15px;
+}
