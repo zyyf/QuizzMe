@@ -24,12 +24,12 @@ header {
     background: #228abf;
 }
 
-#head__logo {
-    display: block;
-    float: left;
+#head__logo--img {
+    margin-left: 70px;
+    cursor: pointer;
 }
 
-#head__user-info {
+/*#head__user-info {
     display: block;
     float: right;
 
@@ -44,14 +44,24 @@ header {
     border-bottom: 3px solid #FF7F50;
 }
 
+*/
+
+#head__user-info {
+    cursor: pointer;
+
+    float: right;
+
+    margin-right: 50px;
+
+    list-style-type: none;
+}
+
 #head__user-info--img {
     width: 40px;
     height: 40px;
     margin: 6px;
 
-    border: 2px solid #fff;
-    border-radius: 64px;
-    background: #fff;
+
 }
 
 #head__user-info--name {
@@ -62,19 +72,50 @@ header {
     font: 20px verdana,arial,tahoma,sans-serif;
 
     color: #fff;
+    padding-right: 10px;
 }
 
+#head__menu {
+    visibility: hidden;
+    position: absolute;
+    right: 50px;
+    list-style-type: none;
+}
 
+#head__menu a {
+    text-decoration: none;
+}
+
+.head__menu-visible {
+    visibility: visible !important;
+}
+
+.head__menu--choice {
+    display: block;
+    background: #228abf;
+    height: 40px;
+    font: 20px verdana,arial,tahoma,sans-serif;
+
+    color: #fff;
+    border-top: .1px solid #4169E1;
+    text-align: center;
+    padding-top: 15px;
+    cursor: pointer;
+}
+
+.head__menu--choice:hover {
+    background: #6495ed;
+}
 
 .head__login {
     text-decoration: none;
-    padding: 0 40px;
+    cursor: pointer;
 
     display: block;
     float: right;
 
     height: 56px;
-    
+    padding: 0 40px;
 
     font: 20px arial,tahoma,sans-serif;
 
@@ -82,9 +123,10 @@ header {
 }
 
 .head__login:hover {
-    background: #6495ED;
     height: 53px;
-    border-bottom: 3px solid #FF7F50;
+
+    border-bottom: 3px solid #ff7f50;
+    background: #6495ed;
 }
 
 .head__login img {
@@ -101,6 +143,8 @@ header {
 /*------------------main body section-------------*/
 
 .main-container {
+    overflow: hidden;
+
     width: 891px;
     margin: 20px auto;
     padding: 20px;
@@ -108,14 +152,158 @@ header {
     border: 1px solid #cbcbcb;
     border-radius: 10px;
     background: #fff;
-    overflow: hidden;
 }
 
 .web-name {
+    padding-right: 10px;
+
     font-weight: 700 !important;
     font-style: italic !important;
-    padding-right: 10px;
 }
+
+.float-background {
+    position: fixed;
+    z-index: 1;
+    top: 56px;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: .7;
+    background: #000;
+}
+
+/*------------------------signup/signin section------------------*/
+
+.form-hidden {
+    visibility: hidden;
+}
+
+.form-visible {
+    visibility: visible;
+}
+
+#signup__form {
+    position: fixed;
+    z-index: 99;
+    top: 20%;
+    left: calc(50% - 243px);
+    overflow: hidden;
+
+    padding: 20px;
+
+    border: 1px solid #cbcbcb;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.close-icon {
+    cursor: pointer;
+
+    float: right;
+
+    font-size: 30px;
+}
+
+#signup__form input,
+#signin__form input {
+    display: block;
+
+    width: 400px;
+    height: 50px;
+    margin: 20px;
+
+    font-size: 20px;
+}
+
+#signup__form--title {
+    margin: 20px;
+
+    font: 30px arial,sans-serif;
+}
+
+#signup__form--title img {
+    position: relative;
+    top: 5px;
+
+    width: 171.36px;
+    height: 36px;
+}
+
+#signin__form--logo img {
+    width: 171.36px;
+    height: 36px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.signup__form--wrong {
+    border-color: #f00 !important;
+}
+
+.signup__form--wrong-notice {
+    margin: 10px 20px;
+
+    font: 14px arial,sans-serif !important;
+    color: #f00 !important;
+}
+
+#signup__form--warning,
+.signup__form--notice,
+.signin__form--notice {
+    margin: 10px 20px;
+
+    font: 14px arial,sans-serif;
+
+    color: #ccc;
+}
+
+#signup__form--button,
+#signin__form--button {
+    cursor: pointer;
+    vertical-align: middle;
+
+    width: 404px !important;
+    padding: 10px 20px;
+
+    color: #fff;
+    border: 3px solid #228abf;
+    border-radius: .2em;
+    outline: none;
+    background: #228abf;
+}
+
+/*#signup__form--button:disabled,
+#signin__form--button:disabled {
+    opacity: .5;
+}*/
+
+#signup__form--signin,
+#signin__form--signup {
+    cursor: pointer;
+
+    margin-left: 5px;
+
+    font-weight: 700;
+
+    color: #228abf;
+}
+
+#signin__form {
+    position: fixed;
+    z-index: 99;
+    top: 20%;
+    left: calc(50% - 243px);
+    overflow: hidden;
+
+    padding: 20px;
+
+    border: 1px solid #cbcbcb;
+    border-radius: 10px;
+    background: #fff;
+}
+
+
 
 
 

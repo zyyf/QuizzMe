@@ -3,29 +3,33 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">  
-	<title>Quizz Me!</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>User menu - QuizzMe!</title>
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	<link href="css/main.css" rel="stylesheet">
 	<link href="css/user-menu.css" rel="stylesheet">
 </head>
 <body>
-    
+
 	<header>
 		<img id="head__logo--img" src="img/logo.png" alt="logo" height="50px">
 		<div id="head__user-info">
-			<img id="head__user-info--img" src="img/ac1.png" alt="avatar">
+			<img id="head__user-info--img" src="img/user-icon.png" alt="avatar">
 			<span id="head__user-info--name">Username</span>
 		</div>
+		<ul id="head__menu">
+			<a href="#"><li class="head__menu--choice">overview</li></a>
+			<a href="home.html"><li class="head__menu--choice">login out</li></a>
+		</ul>
 	</header>
-	
+
 	<div class="main-container" id="user-status">
 		<p>Hello Username !</p>
 		<p>Welcome back to <span class="web-name">QuizzMe!</span></p>
-		<p id="user-status__intro">You have completed quizzes<span id="user-status__intro--times">5</span> times, and got an average of <span id="user-status__intro--average">90</span> points.</p> 
+		<p id="user-status__intro">You have completed quizzes<span id="user-status__intro--times">5</span> times, and got an average of <span id="user-status__intro--average">90</span> points.</p>
 	</div>
-	
+
 	<div class="main-container" id="user-action">
 		<table id="user-action__table">
 			<tbody>
@@ -51,11 +55,13 @@
 				</tr>
 			</tbody>
 		</table>
-		
+
 	</div>
 
 	<footer>
 		<p>It's a project of IWP. &copy; ZhouyangYifan TangPeixian QiXuebin</p>
 	</footer>
+
+	<script type="text/javascript" src="js/menu.js"></script>
 </body>
 </html>

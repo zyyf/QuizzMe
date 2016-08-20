@@ -1,0 +1,359 @@
+@charset "UTF-8";
+
+.Qinput-title {
+    text-indent: 1em;
+
+    margin: -20px;
+    margin-bottom: 20px;
+    padding: 12.5px 5px;
+
+    font: 20px arial,tahoma,sans-serif;
+
+    color: #afb0b0;
+    border-bottom: .5px solid #cbcbcb;
+    background: #f4f5f6;
+}
+
+.uninput-section {
+    border: 3px solid #f00 !important;
+}
+
+#Qinput__type--option {
+    display: table;
+
+    width: 400px;
+    margin: auto;
+}
+
+#Qinput__type--labels {
+    padding-left: 10px;
+
+    background: #dcdcdc url(../img/radio-button-grey.png) no-repeat 15px 50%/15px 15px;
+}
+
+#Qinput__type--labelm {
+    float: right;
+
+    padding-left: 10px;
+
+    background: #dcdcdc url(../img/checkbox-button-grey.png) no-repeat 10px 50%/15px 15px;
+}
+
+#Qinput__type--labels,
+#Qinput__type--labelm {
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+
+    display: inline-block;
+
+    width: 150px;
+    height: 30px;
+    padding-top: 12px;
+
+    font: 14px verdana,arial,tahoma,sans-serif;
+
+    border-radius: 5px;
+}
+
+.Qinput__type--labels-checked {
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+
+    display: inline-block;
+
+    width: 150px;
+    height: 30px;
+    padding-top: 12px;
+
+    font: 14px verdana,arial,tahoma,sans-serif;
+
+    color: #fff;
+    border-radius: 5px;
+    background: #87ceeb url(../img/radio-button-white.png) no-repeat 15px 50%/15px 15px !important;
+}
+
+.Qinput__type--labelm-checked {
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+
+    display: inline-block;
+
+    width: 150px;
+    height: 30px;
+    padding-top: 12px;
+
+    font: 14px verdana,arial,tahoma,sans-serif;
+
+    color: #fff;
+    border-radius: 5px;
+    background: #87ceeb url(../img/checkbox-button-white.png) no-repeat 10px 50%/15px 15px !important;
+}
+
+#Qinput__type--labels input,
+#Qinput__type--labelm input {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+
+#Qinput__classify--select {
+    cursor: pointer;
+
+    display: block;
+
+    width: 300px;
+    margin: auto;
+    padding: 10px 20px;
+
+    font: 20px verdana,arial,tahoma,sans-serif;
+
+    border: none;
+    outline: none;
+    background: #dcdcdc;
+}
+
+#Qinput__classify {
+    position: relative;
+}
+
+#Qinput__classify--new {
+    position: absolute;
+    top: 80px;
+    right: 130px;
+    visibility: hidden;
+
+    width: 170px;
+    padding-bottom: 10px;
+
+    font: 20px verdana,arial,tahoma,sans-serif;
+
+    border-top: none;
+    border-right: none;
+    border-bottom: 1px solid #000;
+    border-left: none;
+    outline: none;
+}
+
+#Qinput__title--content {
+    display: block;
+
+    width: 850px;
+    height: 50px;
+    margin: auto;
+    padding-left: 10px;
+
+    font: 20px verdana,arial,tahoma,sans-serif;
+
+    border: none;
+}
+
+#Qinput__title--content:hover {
+    background: #dcdcdc;
+}
+
+#Qinput__title--content:focus:hover {
+    background: none;
+}
+
+#Qinput__option {
+    position: relative;
+
+    padding-bottom: 70px;
+}
+
+#Qinput__option--list {
+    display: block;
+
+    font: 16px verdana,arial,tahoma,sans-serif;
+
+    list-style-type: none;
+}
+
+.Qinput__option--list-node {
+    margin: 20px;
+    padding: 5px;
+}
+
+.Qinput__option--list-node:hover,
+.Qinput__option--list-node:hover input {
+    background: #dcdcdc;
+}
+
+.Qinput__option--list-node input {
+    width: 700px;
+    margin-left: 20px;
+
+    font: 16px verdana,arial,tahoma,sans-serif;
+
+    border: none;
+    outline: none;
+}
+
+.Qinput__option--list-node input:focus {
+    border-bottom: .5px dotted #000;
+}
+
+.Qinput__option--list-node img {
+    cursor: pointer;
+
+    position: relative;
+    top: 2px;
+    visibility: hidden;
+
+    margin-left: 10px;
+}
+
+.Qinput__option--hidden {
+    visibility: hidden !important;
+}
+
+.Qinput__option--list-node:hover img {
+    visibility: visible;
+}
+
+.Qinput__option--list-node label {
+    cursor: text;
+}
+
+
+#Qinput__option--add {
+    cursor: pointer;
+    text-align: center;
+
+    display: block;
+
+    width: 775px;
+    height: 19px;
+    margin: auto !important;
+    padding: 5px 0;
+}
+
+#Qinput__option--add:hover {
+    height: 17px;
+
+    border: 1px dotted #000;
+    background: #fff !important;
+}
+
+.Qinput__option--list-node-ensure-s,
+.Qinput__option--list-node-ensure-m {
+    cursor: pointer;
+
+    display: block;
+
+    margin: 20px;
+    padding: 5px 5px 5px 0;
+
+    font: 16px verdana,arial,tahoma,sans-serif;
+}
+
+.Qinput__option--list-node-ensure-s:hover,
+.Qinput__option--list-node-ensure-m:hover {
+    background-color: #dcdcdc;
+}
+
+.Qinput__option--list-node-ensure-s input,
+.Qinput__option--list-node-ensure-m input {
+    width: 40px;
+    height: 20px;
+
+    outline: none;
+
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+
+.Qinput__option--list-node-ensure-s input {
+    background: url(../img/radio-button.png) no-repeat 10px 6px/15px 15px;
+}
+
+.Qinput__option--list-node-ensure-m input {
+    background: url(../img/checkbox-button.png) no-repeat 10px 6px/15px 15px;
+}
+
+.Qinput__option--list-node-ensure-s input:checked {
+    background: url(../img/radio-button-checked.png) no-repeat 10px 6px/15px 15px;
+}
+
+.Qinput__option--list-node-ensure-m input:checked {
+    background: url(../img/checkbox-button-checked.png) no-repeat 10px 6px/15px 15px;
+}
+
+#Qinput__option--list p {
+    margin-left: 30px;
+}
+
+#Qinput__option--ensure,
+#Qinput__option--edit {
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+
+    position: absolute;
+    bottom: 15px;
+    display: inline-block;
+
+    width: 100px;
+    height: 20px;
+    margin-top: 20px;
+    margin-left: 52px;
+    padding: 10px 20px;
+
+    font-size: 20px;
+
+    color: #000;
+    border: 1px solid #888;
+    border-radius: .2em;
+    outline: none;
+    background: #fff;
+}
+
+#Qinput__option--ensure:hover,
+#Qinput__option--edit:hover {
+    color: #fff !important;
+    border-color: #228abf !important;
+    background: #228abf !important;
+}
+
+#Qinput__option--edit {
+    visibility: hidden;
+}
+
+#changewarning {
+    position: absolute;
+
+    font: 700 10px verdana,arial,tahoma,sans-serif;
+}
+
+#Qinput__submit--submit {
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+
+    display: inline-block;
+
+    width: 300px;
+    height: 42px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px 25px;
+
+    font-size: 20px;
+
+    color: #000;
+    border: 1px solid #888;
+    border-radius: .2em;
+    outline: none;
+    background: #fff;
+    margin-left: 316.5px;
+}
+
+#Qinput__submit--submit:hover {
+	color: #fff !important;
+	border-color: #228abf !important;
+	background: #228abf !important;
+}

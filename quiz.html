@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">  
-	<title>QuizzMe!</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Quiz - QuizzMe!</title>
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	<link href="css/main.css" rel="stylesheet">
@@ -14,11 +14,16 @@
     <header>
 		<img id="head__logo--img" src="img/logo.png" alt="logo" height="50px">
 		<div id="head__user-info">
-			<img id="head__user-info--img" src="img/ac1.png" alt="avatar">
-			<span id="head__user-info--name">Username(匿名的话就写匿名用户)</span>
+			<img id="head__user-info--img" src="img/user-icon.png" alt="avatar">
+			<span id="head__user-info--name">Username(匿名就改成QuizzMe! User)</span>
 		</div>
+		<ul id="head__menu">
+			<a href="#"><li class="head__menu--choice">overview</li></a>
+			<a href="home.html"><li class="head__menu--choice">login out</li></a>
+			<li class="head__menu--choice">这个菜单只有登录状态才弹出来</li>
+		</ul>
 	</header>
-	
+
 	<form action="#">
 		<div class="main-container" id="single-choice">
 			<div id="single-choice__title">Ⅰ Single choice</div>
@@ -55,7 +60,7 @@
 				</li>
 			</ul>
 		</div>
-		
+
 		<div class="main-container" id="multiple-choice">
 			<div id="multiple-choice__title">Ⅱ Multiple choice</div>
 			<ul id="multiple-choice__list">
@@ -105,5 +110,7 @@
 	<footer>
 		<p>It's a project of IWP. &copy; ZhouyangYifan TangPeixian QiXuebin</p>
 	</footer>
+
+	<script type="text/javascript" src="js/menu.js"></script>
 </body>
 </html>
