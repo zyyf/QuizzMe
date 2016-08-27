@@ -78,18 +78,24 @@
 }
 
 .single-choice__option-list--radio {
+	display: none;
+}
+
+.single-choice__option-list--radio + span {
+	display: inline-block;
     width: 25px;
     height: 25px;
 
     outline: none;
     background: url(../img/radio-button.png) no-repeat 0 5px/20px 20px;
 
+
     -webkit-appearance: none;
        -moz-appearance: none;
             appearance: none;
 }
 
-.single-choice__option-list--radio:checked {
+.single-choice__option-list--radio:checked + span {
     outline: none;
     background: url(../img/radio-button-checked.png) no-repeat 0 5px/20px 20px;
 }
@@ -102,6 +108,11 @@
 }
 
 .multiple-choice__option-list--checkbox {
+	display: none;
+}
+
+.multiple-choice__option-list--checkbox + span {
+	display: inline-block;
     width: 25px;
     height: 25px;
 
@@ -113,7 +124,7 @@
             appearance: none;
 }
 
-.multiple-choice__option-list--checkbox:checked {
+.multiple-choice__option-list--checkbox:checked + span {
     outline: none;
     background: url(../img/checkbox-button-checked.png) no-repeat 0 5px/20px 20px;
 }
