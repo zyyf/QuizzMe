@@ -26,7 +26,7 @@
 			signInForm.className = "form-hidden";
 			signUpForm.className = "form-visible";
 		};
-		floatBack.forEach(function (element) {
+		Array.from(floatBack).forEach(function (element) {  //in Chrome can use floatback.foreach
 			element.onclick = function () {
 				signInForm.className = "form-hidden";
 				signUpForm.className = "form-hidden";
@@ -43,7 +43,7 @@
 		var signInPassword = document.querySelector("#signin__form input[type=\"password\"]");
 
 		function resumeInput() {
-			dataInput.forEach(function (element) {
+			Array.from(dataInput).forEach(function (element) {
 				element.className = "";
 			})
 			passwordInput.className = "";
@@ -65,7 +65,7 @@
 			}else {
 				passwordInput.className = "";
 				passwordWarning.className = "";
-				dataInput.forEach(function (input) {
+				Array.from(dataInput).forEach(function (input) {
 					input.value = input.value.trim();
 				})
 			}
@@ -77,7 +77,7 @@
 				dataInput[2].className = "signup__form--wrong";
 				return false;
 			}
-			dataInput.forEach(function (input) {
+			Array.from(dataInput).forEach(function (input) {
 				input.value = input.value.trim();
 			})
 		}

@@ -92,7 +92,7 @@
 				var option = document.querySelectorAll("#Qinput__option--list input");
 				var isInput = true;
 
-				option.forEach(function (element, index) {
+				Array.from(option).forEach(function (element, index) {
 					if (element.value.trim() === "") {
 						window.location.href = "#Qinput__option";
 						editClassName("queryall", "#Qinput__option--list li", "uninput-section", "add", index);
@@ -161,7 +161,7 @@
 		var deleteButton = document.querySelectorAll("#Qinput__option--list img");
 
 		if (deleteButton) {
-			deleteButton.forEach(function (element, index) {
+			Array.from(deleteButton).forEach(function (element, index) {
 				element.addEventListener("click", function () {
 					optionList.removeChild(optionListNode[index]);
 					editOption("delete");
@@ -187,7 +187,7 @@
 		var listContent = "";
 
 		if (action === "delete") {
-			inputNodeList.forEach(function (element, index, node) {
+			Array.from(inputNodeList).forEach(function (element, index, node) {
 				if (node.length < 4) {
 					listContent += ""
 						+ "<li class='Qinput__option--list-node'>"
@@ -218,7 +218,7 @@
 			addOption();
 			deleteOption();
 		}else if (action === "add") {
-			optionListNode.forEach(function (element, index, node) {
+			Array.from(optionListNode).forEach(function (element, index, node) {
 				listContent += ""
 					+ "<li class='Qinput__option--list-node'>"
 						+ "<img src='img/cross.png'> "
@@ -264,13 +264,13 @@
 			var labelNode = document.querySelectorAll("#Qinput__option--list label");
 			var inputNode = document.querySelectorAll("#Qinput__option--list input");
 
-			labelNode.forEach(function (e, index) {
+			Array.from(labelNode).forEach(function (e, index) {
 				editClassName("queryall", "#Qinput__option--list label", "Qinput__option--list-node-ensure-m"
 					, "add", index);
 				editClassName("queryall", "#Qinput__option--list label", "Qinput__option--list-node-ensure-s"
 					, "delete", index);
 			});
-			inputNode.forEach(function (e) {
+			Array.from(inputNode).forEach(function (e) {
 				e.type = "checkbox";
 			});
 		}
@@ -278,19 +278,19 @@
 			var labelNode = document.querySelectorAll("#Qinput__option--list label");
 			var inputNode = document.querySelectorAll("#Qinput__option--list input");
 
-			labelNode.forEach(function (e, index) {
+			Array.from(labelNode).forEach(function (e, index) {
 				editClassName("queryall", "#Qinput__option--list label", "Qinput__option--list-node-ensure-s"
 					, "add", index);
 				editClassName("queryall", "#Qinput__option--list label", "Qinput__option--list-node-ensure-m"
 					, "delete", index);
 			});
-			inputNode.forEach(function (e) {
+			Array.from(inputNode).forEach(function (e) {
 				e.type = "radio";
 			});
 		}
 
 		confirmButton.addEventListener("click", function () {
-			inputTextNode.forEach(function (element) {
+			Array.from(inputTextNode).forEach(function (element) {
 				element.blur();
 			});
 			if (checkIsInput("option") && checkIsInput("type")) {
@@ -302,7 +302,7 @@
 					var inputNodeList = document.querySelectorAll("#Qinput__option--list input");
 
 					content += "<p>Choose the correct answer.</p>"
-					inputNodeList.forEach(function (element, index) {
+					Array.from(inputNodeList).forEach(function (element, index) {
 						content += ""
 							+ "<label class='Qinput__option--list-node-ensure-s'>"
 								+ "<input type='radio' name='option' value='option"
@@ -321,7 +321,7 @@
 					var inputNodeList = document.querySelectorAll("#Qinput__option--list input");
 
 					content += "<p>Choose the correct answers.</p>"
-					inputNodeList.forEach(function (element, index) {
+					Array.from(inputNodeList).forEach(function (element, index) {
 						content += ""
 							+ "<label class='Qinput__option--list-node-ensure-m'>"
 								+ "<input type='checkbox' name='option' value='option"

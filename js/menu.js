@@ -22,7 +22,7 @@
 		var menu = document.querySelectorAll(".head__menu--choice");
 		var userAvatar = document.getElementById("head__user-info");
 
-		menu.forEach(function (element) {
+		Array.from(menu).forEach(function (element) {
 			element.style.width = window.getComputedStyle(userAvatar).width;
 		});
 	}
