@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+table {
+    text-align: center;
+
+    margin: 50px auto;
+
+    font: 16px arial,tahoma,sans-serif;
+    border-collapse: collapse;
+}
+
+thead td {
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.table-date {
+    width: 500px;
+    height: 50px;
+}
+
+.table-score {
+    width: 300px;
+}
+
+tbody td {
+    border-bottom: 1px solid #ccc;
+}
+
+tbody tr:hover {
+    background-color: #87ceeb;
+}
+
+thead td:hover {
+    cursor: pointer;
+
+    background-color: #87ceeb;
+}
+
+#backbutton input {
+    cursor: pointer;
+    vertical-align: middle;
+
+    width: 130px;
+    margin-top: 20px;
+    padding: 5px 10px;
+
+    font-size: 30px;
+
+    border: 1px solid #888;
+    border-radius: .2em;
+    outline: none;
+    background: #fff;
+    box-shadow: 0 .05em .25em rgba(0,0,0,.5);
+}
+
+input[type="button"]:hover {
+    color: #fff !important;
+    border-color: #228abf !important;
+    background: #228abf !important;
+}
+
+
