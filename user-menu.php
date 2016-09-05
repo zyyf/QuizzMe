@@ -1,3 +1,9 @@
+<?php
+	include("include/function.php");
+	session_start();
+	$account = $_SESSION["account"];
+?>
+
 <!DOCTYPE html>
 <html lang="en">  <!-- "zh-cn" for Chinese, "en" for English -->
 <head>
@@ -16,18 +22,39 @@
 		<img id="head__logo--img" src="img/logo.png" alt="logo" height="50px">
 		<div id="head__user-info">
 			<img id="head__user-info--img" src="img/user-icon.png" alt="avatar">
-			<span id="head__user-info--name">zzzzzzzzzzz</span>
+			<span id="head__user-info--name">
+			<?= get_name($_SESSION["account"]) ?></span>
 		</div>
 		<ul id="head__menu">
-			<a href="#"><li class="head__menu--choice">overview</li></a>
-			<a href="home.html"><li class="head__menu--choice">login out</li></a>
+			<a href="logout.php"><li class="head__menu--choice">login out</li></a>
 		</ul>
 	</header>
 
 	<div class="main-container" id="user-status">
-		<p>Hello Username !</p>
+		<p>Hello <?= get_name($_SESSION["account"])?>!</p>
 		<p>Welcome back to <span class="web-name">QuizzMe!</span></p>
-		<p id="user-status__intro">You have completed quizzes<span id="user-status__intro--times">5</span> times, and got an average of <span id="user-status__intro--average">90</span> points.</p>
+			<?php
+				$history = get_history($account);
+				$try = get_try($history);
+				$ave = get_ave($history);
+				if($try!= 0){
+		?>
+		<p id="user-status__intro">You have completed quizzes
+		<span id="user-status__intro--times">
+			<?= $try ?>
+		</span> times, and got an average of
+		<span id="user-status__intro--average">
+			<?= $ave ?>
+		</span> points.
+		</p>
+		<?php
+			}
+			else{
+		?>
+			<p id="user-status__intro">You haven't take a quizz!</p>
+		<?php
+			}
+		?>
 	</div>
 
 	<div class="main-container" id="user-action">
@@ -35,23 +62,23 @@
 			<tbody>
 				<tr>
 					<td>
-						Now, you can start a random quiz
+						Now, you can start a random quizz
 					</td>
 					<td>
-						<a href="quiz.html"><input type="button" value="Start a quiz"></a>
+						<a href="quizz.php"><input type="button" value="Start a quiz"></a>
 					</td>
 				</tr>
 				<tr>
 					<td>
 						You can also add question to the Q&amp;A pool
 					</td>
-					<td><a href="#"><input type="button" value="Add question"></a></td>
+					<td><a href="add-question.php"><input type="button" value="Add question"></a></td>
 				</tr>
 				<tr>
 					<td>
 						To view your history information
 					</td>
-					<td><a href="#"><input type="button" value="View history"></a></td>
+					<td><a href="history.php"><input type="button" value="View history"></a></td>
 				</tr>
 			</tbody>
 		</table>

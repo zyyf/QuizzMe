@@ -1,7 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<!-- "zh-cn" for Chinese, "en" for English -->
+<?php
+	include("include/function.php");
+	session_start();
+	if (!isset($_SESSION["account"])) {
+		header("location:home.php?type=nologin");
+	}
+?>
 
+<!DOCTYPE html>
+<html lang="en">  <!-- "zh-cn" for Chinese, "en" for English -->
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -12,25 +18,21 @@
 	<link href="css/main.css" rel="stylesheet">
 	<link href="css/add-question.css" rel="stylesheet">
 </head>
-
 <body>
-	<header>
+    <header>
 		<img id="head__logo--img" src="img/logo.png" alt="logo" height="50px">
 		<div id="head__user-info">
 			<img id="head__user-info--img" src="img/user-icon.png" alt="avatar">
-			<span id="head__user-info--name">Username</span>
+			<span id="head__user-info--name">
+			<?= get_name($_SESSION["account"]) ?></span>
 		</div>
 		<ul id="head__menu">
-			<a href="#">
-				<li class="head__menu--choice">overview</li>
-			</a>
-			<a href="home.html">
-				<li class="head__menu--choice">login out</li>
-			</a>
+			<a href="user-menu.php"><li class="head__menu--choice">overview</li></a>
+			<a href="log"><li class="head__menu--choice">login out</li></a>
 		</ul>
 	</header>
 
-	<form action="#" method="POST" id="Qinput">
+	<form action="add-form.php" method="POST" id="Qinput">
 		<div class="main-container" id="Qinput__type">
 			<p class="Qinput-title">Ⅰ Question type</p>
 			<div id="Qinput__type--option">
@@ -44,10 +46,16 @@
 			<input type="text" name="new-classification" id="Qinput__classify--new" placeholder="What?">
 			<select name="Qclassify" id="Qinput__classify--select">
 				<option value="" disabled selected>Choose a classification</option>
-				<option value="music">Music</option>
-				<option value="history">History</option>
-				<option value="science">Science</option>
-				<option value="sport">Sport</option>
+				<?php
+					$quizzType = file("quizzDB/quizzType.txt",FILE_IGNORE_NEW_LINES);
+ 					for($i=0; $i<count($quizzType); $i++){
+ 				?>
+ 				<option value="<?= $quizzType[$i] ?>">
+ 					<?= $quizzType[$i] ?>
+ 				</option>
+				 <?php
+				}
+ 				?>
 				<option value="other">Other</option>
 			</select>
 		</div>
@@ -92,8 +100,7 @@
 		<p>It's a project of IWP. &copy; ZhouyangYifan TangPeixian QiXuebin</p>
 	</footer>
 
-	<script src="js/menu.js" type="text/javascript"></script>
-	<script src="js/add-question.js" type="text/javascript"></script>
+    <script src="js/menu.js" type="text/javascript"></script>
+    <script src="js/add-question.js" type="text/javascript"></script>
 </body>
-
 </html>

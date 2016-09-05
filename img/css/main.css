@@ -25,9 +25,8 @@ header {
 }
 
 #head__logo--img {
-    cursor: pointer;
-
     margin-left: 70px;
+    cursor: pointer;
 }
 
 /*#head__user-info {
@@ -52,10 +51,8 @@ header {
 
     float: right;
 
-    min-width: 150px;
     margin-right: 50px;
 
-    background-color: #459bc7;
     list-style-type: none;
 }
 
@@ -63,24 +60,25 @@ header {
     width: 40px;
     height: 40px;
     margin: 6px;
+
+
 }
 
 #head__user-info--name {
     float: right;
 
     margin-top: 16px;
-    margin-right: 10px;
 
     font: 20px verdana,arial,tahoma,sans-serif;
 
     color: #fff;
+    padding-right: 10px;
 }
 
 #head__menu {
+    visibility: hidden;
     position: absolute;
     right: 50px;
-    visibility: hidden;
-
     list-style-type: none;
 }
 
@@ -93,20 +91,16 @@ header {
 }
 
 .head__menu--choice {
-    cursor: pointer;
-    text-align: center;
-
     display: block;
-
-    min-width: 150px;
+    background: #228abf;
     height: 40px;
-    padding-top: 15px;
-
     font: 20px verdana,arial,tahoma,sans-serif;
 
     color: #fff;
-    border-top: .1px solid #4169e1;
-    background: #228abf;
+    border-top: .1px solid #4169E1;
+    text-align: center;
+    padding-top: 15px;
+    cursor: pointer;
 }
 
 .head__menu--choice:hover {
@@ -114,8 +108,8 @@ header {
 }
 
 .head__login {
-    cursor: pointer;
     text-decoration: none;
+    cursor: pointer;
 
     display: block;
     float: right;
@@ -251,7 +245,6 @@ header {
     margin: 10px 20px;
 
     font: 14px arial,sans-serif !important;
-
     color: #f00 !important;
 }
 
@@ -308,24 +301,6 @@ header {
     border: 1px solid #cbcbcb;
     border-radius: 10px;
     background: #fff;
-}
-
-.cross {
-    font-weight: 700;
-
-    color: #f00;
-}
-
-#signup__form--error,
-#signin__form--accounterror,
-#signin__form--passworderror {
-    display: none;
-
-    margin: 0 20px;
-
-    font: 14px arial,sans-serif;
-
-    color: #f00;
 }
 
 

@@ -56,7 +56,6 @@
 					editClassName("id", "Qinput__type", "uninput-section", "delete");
 					return true;
 				}
-				break;
 			case "classify":
 				var classifySelect = document.getElementById("Qinput__classify--select");
 				var newInput = document.getElementById("Qinput__classify--new");
@@ -75,7 +74,6 @@
 					editClassName("id", "Qinput__classify--new", "uninput-section", "delete");
 					return true;
 				}
-				break;
 			case "title":
 				var titleText = document.getElementById("Qinput__title--content");
 
@@ -87,7 +85,6 @@
 					editClassName("id", "Qinput__title", "uninput-section", "delete");
 					return true;
 				}
-				break;
 			case "option":
 				var option = document.querySelectorAll("#Qinput__option--list input");
 				var isInput = true;
@@ -106,14 +103,39 @@
 				}else {
 					return false;
 				}
-				break;
 			case "ensureoption":
 				var confirmButton = document.getElementById("Qinput__option--ensure");
+				var radioSingle = document.querySelector("#Qinput__type--labels input");
+				var radioMultiple = document.querySelector("#Qinput__type--labelm input");
 
 				if (confirmButton.style.visibility == "hidden") {
-					editClassName("id", "Qinput__option", "uninput-section", "delete");
-					return true;
-				}else {
+					if (radioSingle.checked) {
+						var singleOptionNode = document.querySelectorAll('.Qinput__option--list-node-ensure-s input');
+
+						if (Array.from(singleOptionNode).some(function (e) {
+							return e.checked;
+						})) {
+							editClassName("id", "Qinput__option", "uninput-section", "delete");
+							return true;
+						} else {
+							editClassName("id", "Qinput__option", "uninput-section", "add");
+							return false;
+						}
+					} else {
+						var multipleOptionNode = document.querySelectorAll(".Qinput__option--list-node-ensure-m input");
+
+						if (Array.from(multipleOptionNode).some(function (e) {
+							return e.checked;
+						})) {
+							editClassName("id", "Qinput__option", "uninput-section", "delete");
+							return true;
+						} else {
+							editClassName("id", "Qinput__option", "uninput-section", "add");
+							return false;
+						}
+					}
+
+				} else {
 					editClassName("id", "Qinput__option", "uninput-section", "add");
 					return false;
 				}
@@ -305,9 +327,12 @@
 					Array.from(inputNodeList).forEach(function (element, index) {
 						content += ""
 							+ "<label class='Qinput__option--list-node-ensure-s'>"
-								+ "<input type='radio' name='option' value='option"
-								+ (index + 1) + "'/>Option " + (index + 1) + ":  " + element.value.trim()
-							+ "</label>";
+								+ "<input type='radio' name='option[]' value='" + (index + 1)
+								+ "'/>Option " + (index + 1) + ":  " + element.value.trim()
+							+ "</label>"
+							+ "<input type='text' name='optioncontent"
+							+ (index + 1) + "' value='" +  element.value.trim()
+							+ "' hidden>";
 						if (!index) {
 							saveOptionValue[0] = element.value;
 						}else {
@@ -324,9 +349,12 @@
 					Array.from(inputNodeList).forEach(function (element, index) {
 						content += ""
 							+ "<label class='Qinput__option--list-node-ensure-m'>"
-								+ "<input type='checkbox' name='option' value='option"
-								+ (index + 1) + "'/>Option " + (index + 1) + ":  " + element.value.trim()
-							+ "</label>";
+								+ "<input type='checkbox' name='option[]' value='" + (index + 1)
+								+ "'/>Option " + (index + 1) + ":  " + element.value.trim()
+							+ "</label>"
+							+ "<input type='text' name='optioncontent"
+							+ (index + 1) + "' value='" +  element.value.trim()
+							+ "' hidden>";
 						if (!index) {
 							saveOptionValue[0] = element.value;
 						}else {
