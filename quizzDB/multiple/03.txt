@@ -1,7 +1,8 @@
-History
-在鸦片战争前已经确立了资本主义制度的国家有()
-1 2 3
-英国
-法国
-美国
-日本(明治维新后)
+Financial
+Bank's internal audit departments () periodically review the rating system and its banking operations, the prosecution trial included ( )
+1 2 3 4
+Operation of the credit sector.
+Probability of default.
+LGD(loss given default).
+Default risk exposure.
+Expected loss.

@@ -42,3 +42,8 @@ a {
 #tips2 p {
     font: 20px/40px arial,tahoma,sans-serif;
 }
+
+footer {
+    position: fixed;
+    bottom: 0;
+}

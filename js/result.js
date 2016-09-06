@@ -34,27 +34,37 @@
 				break;
 		}
 	}
+	function renderLogo() {
+		var logoBtn = document.getElementById("head__logo--img");
+		logoBtn.onclick = function () {
+			window.location.href = "user-menu.php";
+		};
+	}
     function renderSignForm() {
-		var signInBtn = document.getElementById("signin-link");
-		var signUpBtn = document.getElementById("signup-link");
+		var signInBtn = document.querySelectorAll("#signin-link");
+		var signUpBtn = document.querySelectorAll("#signup-link");
 		var signInForm = document.querySelectorAll(".form-hidden")[1];
 		var signUpForm = document.querySelectorAll(".form-hidden")[0];
 		var floatBack = document.querySelectorAll(".close");
 		var signInLink = document.getElementById("signup__form--signin");
 		var signUpLink = document.getElementById("signin__form--signup");
 
-		signInBtn.onclick = function () {
-			signUpForm.className = "form-hidden";
-			signInForm.className = "form-visible";
-		};
+		if (signInBtn.length) {
+			signInBtn[0].onclick = function () {
+				signUpForm.className = "form-hidden";
+				signInForm.className = "form-visible";
+			};
+		}
 		signInLink.onclick = function () {
 			signUpForm.className = "form-hidden";
 			signInForm.className = "form-visible";
 		};
-		signUpBtn.onclick = function () {
-			signInForm.className = "form-hidden";
-			signUpForm.className = "form-visible";
-		};
+		if (signUpBtn.length) {
+			signUpBtn[0].onclick = function () {
+				signInForm.className = "form-hidden";
+				signUpForm.className = "form-visible";
+			};
+		}
 		signUpLink.onclick = function () {
 			signInForm.className = "form-hidden";
 			signUpForm.className = "form-visible";
@@ -69,4 +79,5 @@
 
     renderSignForm();
 	errorCheck();
+	renderLogo();
 })();

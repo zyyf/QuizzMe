@@ -17,6 +17,14 @@ thead td {
     font-weight: 700;
 }
 
+#datehead {
+    width: 500px;
+}
+
+#scorehead {
+    width: 300px;
+}
+
 .table-date {
     width: 500px;
     height: 50px;
@@ -63,4 +71,7 @@ input[type="button"]:hover {
     background: #228abf !important;
 }
 
-
+footer {
+    position: fixed;
+    bottom: 0;
+}

@@ -51,6 +51,14 @@ input[type="button"]:hover {
     box-shadow: 0 .05em .25em rgba(0,0,0,.5);
 }
 
+#username {
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+}
+
 footer {
     position: absolute;
     bottom: 0;

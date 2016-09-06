@@ -146,7 +146,7 @@
 	function renderLogo() {
 		var logoBtn = document.getElementById("head__logo--img");
 		logoBtn.onclick = function () {
-			window.location.href = "user-menu.html";
+			window.location.href = "user-menu.php";
 		};
 	}
 	function renderRadio() {
@@ -328,7 +328,7 @@
 						content += ""
 							+ "<label class='Qinput__option--list-node-ensure-s'>"
 								+ "<input type='radio' name='option[]' value='" + (index + 1)
-								+ "'/>Option " + (index + 1) + ":  " + element.value.trim()
+								+ "'/><span></span>Option " + (index + 1) + ":  " + element.value.trim()
 							+ "</label>"
 							+ "<input type='text' name='optioncontent"
 							+ (index + 1) + "' value='" +  element.value.trim()
@@ -350,7 +350,7 @@
 						content += ""
 							+ "<label class='Qinput__option--list-node-ensure-m'>"
 								+ "<input type='checkbox' name='option[]' value='" + (index + 1)
-								+ "'/>Option " + (index + 1) + ":  " + element.value.trim()
+								+ "'/><span></span>Option " + (index + 1) + ":  " + element.value.trim()
 							+ "</label>"
 							+ "<input type='text' name='optioncontent"
 							+ (index + 1) + "' value='" +  element.value.trim()
@@ -395,6 +395,8 @@
 				|| !checkIsInput("title")
 				|| !checkIsInput("ensureoption")) {
 				return false;
+			} {
+				alert("Success!");
 			}
 		};
 	}

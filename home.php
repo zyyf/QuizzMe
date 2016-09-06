@@ -25,7 +25,7 @@
 	</div>
 
 	<div class="main-container" id="user-action">
-		<p id="user-action__msg">You can also start a quick quiz without login:<a href="quizzGuest.php"  class="welcome__link">Quick quiz</a></p>
+		<p id="user-action__msg">You can also start a quick quiz without login:<a href="quizGuest.php"  class="welcome__link">Quick quiz</a></p>
 	</div>
 
 	<div class="form-hidden">

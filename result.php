@@ -49,17 +49,6 @@
 				<li class="head__menu--choice">login out</li>
 			</a>
 		</ul>
-		<?php  }
-			else{
-		?>
-		<ul id="head__menu">
-			<a href="user-menu.php">
-				<li class="head__menu--choice">Sign up</li>
-			</a>
-			<a href="logout.php">
-				<li class="head__menu--choice">Sign in</li>
-			</a>
-		</ul>
 		<?php
 			}
 		?>
@@ -83,7 +72,7 @@
 	?>
 	<div class="main-container" id="tips2">
 		<p>
-			You have not login, your score will not be saved. If you want to save your score to check them later, just
+			You have not login, and your score will not be saved. If you want to save your score to check them later, just
 			<span class="sign-link" id="signin-link">sign in</span>. If you don't have a <span class="web-name">QuizzMe!</span>account,
 			 you can <span class="sign-link" id="signup-link">sign up</span> and get an account.
 		</p>
@@ -120,6 +109,11 @@
 	</div>
 
 	<div id="errornum" hidden><?= $_GET["error"] ?></div>
+
+
+	<footer>
+		<p>It's a project of IWP. &copy; ZhouyangYifan TangPeixian QiXuebin</p>
+	</footer>
 
 
 	<script src="js/menu.js" type="text/javascript"></script>

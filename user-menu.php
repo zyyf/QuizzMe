@@ -31,7 +31,7 @@
 	</header>
 
 	<div class="main-container" id="user-status">
-		<p>Hello <?= get_name($_SESSION["account"])?>!</p>
+		<p>Hello, <span id="username"> <?= get_name($_SESSION["account"])?></span> !</p>
 		<p>Welcome back to <span class="web-name">QuizzMe!</span></p>
 			<?php
 				$history = get_history($account);
@@ -44,14 +44,14 @@
 			<?= $try ?>
 		</span> times, and got an average of
 		<span id="user-status__intro--average">
-			<?= $ave ?>
+			<?= round($ave) ?>
 		</span> points.
 		</p>
 		<?php
 			}
 			else{
 		?>
-			<p id="user-status__intro">You haven't take a quizz!</p>
+			<p id="user-status__intro">You haven't take any quizz!</p>
 		<?php
 			}
 		?>
@@ -65,7 +65,7 @@
 						Now, you can start a random quizz
 					</td>
 					<td>
-						<a href="quizz.php"><input type="button" value="Start a quiz"></a>
+						<a href="quiz.php"><input type="button" value="Start a quiz"></a>
 					</td>
 				</tr>
 				<tr>

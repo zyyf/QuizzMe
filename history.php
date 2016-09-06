@@ -40,8 +40,8 @@
 		<table>
 			<thead>
 				<tr>
-					<td>Date</td>
-					<td>Score</td>
+					<td id="datehead">Date</td>
+					<td id="scorehead">Score</td>
 				</tr>
 			</thead>
 			<tbody>
@@ -72,10 +72,15 @@
 		</table>
 	</div>
 
+	<footer>
+		<p>It's a project of IWP. &copy; ZhouyangYifan TangPeixian QiXuebin</p>
+	</footer>
+
 
 
 	<!-- a lot of elements -->
 	<script src="js/menu.js" type="text/javascript"></script>
+	<script src="js/history.js" type="text/javascript"></script>
 </body>
 
 </html>

@@ -53,6 +53,7 @@ header {
     float: right;
 
     min-width: 150px;
+    height: 56px;
     margin-right: 50px;
 
     background-color: #459bc7;

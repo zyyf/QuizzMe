@@ -2,20 +2,22 @@
 (function () {
 	function menuAction() {
 		var userAvatar = document.getElementById("head__user-info");
-		var menu = document.getElementById("head__menu");
+		var menu = document.querySelectorAll("#head__menu");
 		var menuAndAvatar = document.getElementById("head__menu-action");
 
-		userAvatar.onmouseover = function () {
-			menu.className = "head__menu-visible";
-		};
-		menu.onmouseover = function () {
-			menu.className = "head__menu-visible";
-		}
-		menu.onmouseout = function () {
-			menu.className = "";
-		}
-		userAvatar.onmouseout = function () {
-			menu.className = "";
+		if (menu.length) {
+			userAvatar.onmouseover = function () {
+				menu[0].className = "head__menu-visible";
+			};
+			menu[0].onmouseover = function () {
+				menu[0].className = "head__menu-visible";
+			}
+			menu[0].onmouseout = function () {
+				menu[0].className = "";
+			}
+			userAvatar.onmouseout = function () {
+				menu[0].className = "";
+			}
 		}
 	}
 	function renderMenu() {
@@ -30,9 +32,11 @@
 			img.style.marginLeft = margin;
 			name.style.marginRight = margin;
 		}
-		Array.from(menu).forEach(function (element) {
-			element.style.width = window.getComputedStyle(userAvatar).width;
-		});
+		if (menu.length) {
+			Array.from(menu).forEach(function (element) {
+				element.style.width = window.getComputedStyle(userAvatar).width;
+			});
+		}
 	}
 
 	renderMenu();

@@ -1,33 +1,41 @@
 "use strict";
 
 (function () {
-	function menuAction() {
-		var userAvatar = document.getElementById("head__user-info");
-		var menu = document.getElementById("head__menu");
-		var menuAndAvatar = document.getElementById("head__menu-action");
 
-		userAvatar.onmouseover = function () {
-			menu.className = "head__menu-visible";
-		};
-		menu.onmouseover = function () {
-			menu.className = "head__menu-visible";
+	function checkQInput() {
+		var i;
+
+		for (i = 1;i <= 10;i++) {
+			var single = document.querySelectorAll(".single-choice__option-list--label input[name='single-choice" + i + "']");
+
+			if (!Array.from(single).some(function (e) {
+				return e.checked;
+			})) {
+				return false;
+			}
 		}
-		menu.onmouseout = function () {
-			menu.className = "";
+		for (i = 1;i <= 10;i++) {
+			var multiple = document.querySelectorAll(".multiple-choice__option-list--label input[name='multiple-choice" + i + "']");
+
+			if (!Array.from(multiple).some(function (e) {
+				return e.checked;
+			})) {
+				return false;
+			}
 		}
-		userAvatar.onmouseout = function () {
-			menu.className = "";
+		return true;
+	}
+	function submitConfirm() {
+		var form = document.querySelector('form');
+
+		form.onsubmit = function () {
+			if (!checkQInput()) {
+				if (!confirm("There are some questions not be done, are you sure you want to submit this quiz?")) {
+					return false;
+				}
+			}
 		}
 	}
-	function renderMenu() {
-		var menu = document.querySelectorAll(".head__menu--choice");
-		var userAvatar = document.getElementById("head__user-info");
 
-		Array.from(menu).forEach(function (element) {
-			element.style.width = window.getComputedStyle(userAvatar).width;
-		});
-	}
-
-	renderMenu();
-	menuAction();
+	submitConfirm();
 })();

@@ -1,11 +1,15 @@
 <?php
 	include("include/function.php");
 	session_start();
-?>
+	session_destroy();
+	session_regenerate_id(TRUE);
+ ?>
 
 
 <!DOCTYPE html>
-<html lang="en">  <!-- "zh-cn" for Chinese, "en" for English -->
+<html lang="en">
+<!-- "zh-cn" for Chinese, "en" for English -->
+
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -16,29 +20,16 @@
 	<link href="css/main.css" rel="stylesheet">
 	<link href="css/quiz.css" rel="stylesheet">
 </head>
+
 <body>
-    <header>
+	<header>
 		<img id="head__logo--img" src="img/logo.png" alt="logo" height="50px">
 		<div id="head__user-info">
 			<img id="head__user-info--img" src="img/user-icon.png" alt="avatar">
-			<span id="head__user-info--name">
-			<?php
-				if (isset($_SESSION["account"] )) {
-					$account = $_SESSION["account"];
-			?>
-			<?= get_name($account) ?>
-			<?php } ?>
-			</span>
+			<span id="head__user-info--name">Guest</span>
 		</div>
-		<?php
-			if (isset($_SESSION["account"])) {
-		?>
-		<ul id="head__menu">
-			<a href="user-menu.php"><li class="head__menu--choice">overview</li></a>
-			<a href="logout.php"><li class="head__menu--choice">login out</li></a>
-		</ul>
-		<?php  } ?>
 	</header>
+
 
 	<form action="point.php" method="POST">
 		<div class="main-container" id="single-choice">
@@ -63,7 +54,7 @@
 					<span class="single-choice__question-title--question-order">
 						<?= "$quizzNUM" ?>
 					</span>
-					<span class="single-choice__question-title--contentcontent"><?= $title ?></span>
+					<?= $title ?>
 					<span class="single-choice__question-title--classify">
 						<?= $classify ?>
 					</span>
@@ -74,7 +65,7 @@
 							for($i=0 ; $i <count($option); $i++){
 						?>
 							<label class="single-choice__option-list--label">
-							<input type="radio" class="single-choice__option-list--radio" name="single-choice<?= $num?>" value="<?= $i+ 1?>">
+							<input type="radio" class="single-choice__option-list--radio" name="single-choice<?= $num + 1 ?>" value="<?= $i+ 1?>">
 							<span class="single-choice__option-list--content">
 							<p><?= $option[$i] ?></p>
 							</span>
@@ -118,12 +109,12 @@
 					</span>
 					</p>
 					</div>
-					<div class="multiple-choice__>option-list">
+					<div class="multiple-choice__option-list">
 						<?php
 							for($i=0 ; $i <count($option); $i++){
 						?>
 							<label class="multiple-choice__option-list--label">
-							<input type="checkbox" class="multiple-choice__option-list--checkbox" name="multiple-choice<?= $num?>" value="<?= $i+ 1?>">
+							<input type="checkbox" class="multiple-choice__option-list--checkbox" name="multiple-choice<?= $num + 1 ?>" value="<?= $i+ 1?>">
 							<span class="multiple-choice__option-list--content">
 							<p><?= $option[$i] ?></p>
 							</span>
@@ -149,5 +140,7 @@
 	</footer>
 
 	<script type="text/javascript" src="js/menu.js"></script>
+	<script type="text/javascript" src="js/quiz.js"></script>
 </body>
+
 </html>
